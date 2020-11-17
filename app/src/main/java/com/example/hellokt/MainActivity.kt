@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.example.hellokt.bottomBar.BottomBarItemView
 import com.example.hellokt.bottomBar.BottomBarLayout
+import com.example.hellokt.bottomBar.BottomBarItemView
 import com.example.hellokt.fragment.HomeFragment
 import com.example.hellokt.fragment.MineFragment
 
@@ -30,11 +30,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val frameLayout = findViewById<FrameLayout>(R.id.base_content_view)
         val bottomBar = findViewById<BottomBarLayout>(R.id.bottom_bar)
         bottomBar.setSourceFrameLayout(this, R.id.base_content_view)
-            .addItemView(BottomBarItemView(this, "主页", R.drawable.home_page_selector),
+            ?.addItemView(BottomBarItemView(this, "主页", R.drawable.home_page_selector),
                 HomeFragment().javaClass.newInstance())
-            .addItemView(BottomBarItemView(this, "我的", R.drawable.mine_page_selector),
+            ?.addItemView(BottomBarItemView(this, "我的", R.drawable.mine_page_selector),
                 MineFragment().javaClass.newInstance())
-            .initialise()
+            ?.initialise()
 
         bottomBar.setSelected(0)
 
