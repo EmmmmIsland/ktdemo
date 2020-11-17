@@ -16,7 +16,7 @@
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="78dp"
-        android:background="#ff0B56"
+        android:background="@color/SandyBrown"
         android:layout_alignParentBottom="true"
         android:gravity="bottom" />
 
