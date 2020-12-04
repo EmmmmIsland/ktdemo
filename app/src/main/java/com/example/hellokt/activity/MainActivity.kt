@@ -9,6 +9,7 @@ import com.example.hellokt.bottomBar.BottomBarItemView
 import com.example.hellokt.bottomBar.BottomBarLayout
 import com.example.hellokt.fragment.HomeFragment
 import com.example.hellokt.fragment.MineFragment
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(), View.OnClickListener {
     private val a: Int = 2
@@ -20,16 +21,17 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     }
 
     override fun initView() {
+        setContentView(R.layout.activity_main)
         val frameLayout = findViewById<FrameLayout>(R.id.base_content_view)
-        val bottomBar = findViewById<BottomBarLayout>(R.id.bottom_bar)
-        bottomBar.setSourceFrameLayout(this, R.id.base_content_view)
+
+        bottom_bar.setSourceFrameLayout(this, R.id.base_content_view)
             ?.addItemView(BottomBarItemView(this, "主页", R.drawable.home_page_selector),
                 HomeFragment().javaClass.newInstance())
             ?.addItemView(BottomBarItemView(this, "我的", R.drawable.mine_page_selector),
                 MineFragment().javaClass.newInstance())
             ?.initialise()
 
-        bottomBar.setSelected(0)
+        bottom_bar.setSelected(0)
 
         //        val cc = findViewById<TextView>(R.id.tv_name);
         //        cc.setOnClickListener(this);
