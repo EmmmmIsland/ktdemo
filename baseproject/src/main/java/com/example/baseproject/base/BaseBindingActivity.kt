@@ -1,8 +1,9 @@
-package com.example.hellokt.base
+package com.example.baseproject.base
 
 import android.content.Intent
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.example.hellokt.base.ViewBehavior
 
 abstract class BaseBindingActivity<B : ViewDataBinding> : BaseActivity(),
     ViewBehavior {

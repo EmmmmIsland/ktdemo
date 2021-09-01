@@ -1,6 +1,6 @@
 package com.example.hellokt.viewmodel
 
-import com.example.hellokt.base.BaseViewModel
+import com.example.baseproject.base.BaseViewModel
 
 class SplashViewModel : BaseViewModel() {
 

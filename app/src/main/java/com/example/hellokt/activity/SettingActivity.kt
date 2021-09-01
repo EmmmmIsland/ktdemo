@@ -2,7 +2,7 @@ package com.example.hellokt.activity
 
 import android.os.Bundle
 import com.example.hellokt.R
-import com.example.hellokt.base.BaseAppBVMActivity
+import com.example.baseproject.base.BaseAppBVMActivity
 import com.example.hellokt.databinding.ActivitySettingBinding
 import com.example.hellokt.model.User
 import com.example.hellokt.viewmodel.SettingViewModel

@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.example.hellokt.R
-import com.example.hellokt.base.BaseAppBVMActivity
+import com.example.baseproject.base.BaseAppBVMActivity
 import com.example.hellokt.bottomBar.BottomBarItemView
 import com.example.hellokt.databinding.ActivityMainBinding
 import com.example.hellokt.fragment.HomeFragment

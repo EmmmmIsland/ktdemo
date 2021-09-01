@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import com.example.hellokt.R
-import com.example.hellokt.base.BaseAppBVMFragment
+import com.example.baseproject.base.BaseAppBVMFragment
 import com.example.hellokt.databinding.FragmentHomeBinding
 import com.example.hellokt.viewmodel.HomeViewModel
 

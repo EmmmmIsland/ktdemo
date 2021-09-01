@@ -1,4 +1,4 @@
-package com.example.hellokt.base
+package com.example.baseproject.base
 
 import android.content.Context
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 
-abstract class BaseFragment : Fragment(), ILazyLoad{
+abstract class BaseFragment : Fragment(), ILazyLoad {
     /**
      * 缓存视图，如果视图已经创建，则不再初始化视图
      */

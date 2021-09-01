@@ -1,4 +1,4 @@
-package com.example.hellokt.base
+package com.example.baseproject.base
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver

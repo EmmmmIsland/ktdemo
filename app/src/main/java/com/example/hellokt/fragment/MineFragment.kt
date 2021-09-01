@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.hellokt.R
 import com.example.hellokt.activity.SettingActivity
-import com.example.hellokt.base.BaseAppBVMFragment
+import com.example.baseproject.base.BaseAppBVMFragment
 import com.example.hellokt.databinding.FragmentMineBinding
 import com.example.hellokt.viewmodel.MineViewModel
 

@@ -1,4 +1,4 @@
-package com.example.hellokt.extensions
+package com.example.baseproject.extensions
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData

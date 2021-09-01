@@ -1,8 +1,9 @@
-package com.example.hellokt.base
+package com.example.baseproject.base
 
 import android.annotation.SuppressLint
 import android.app.Application
 import androidx.lifecycle.*
+import com.example.hellokt.base.ViewBehavior
 
 abstract class BaseViewModel : ViewModel(), ViewModelLifecycle, ViewBehavior {
 

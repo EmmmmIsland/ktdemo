@@ -1,4 +1,4 @@
-package com.example.hellokt.base
+package com.example.baseproject.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

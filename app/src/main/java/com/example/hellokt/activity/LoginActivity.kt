@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.example.hellokt.R
-import com.example.hellokt.base.BaseAppBVMActivity
+import com.example.baseproject.base.BaseAppBVMActivity
 import com.example.hellokt.databinding.ActivityLoginBinding
 import com.example.hellokt.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.activity_login.*

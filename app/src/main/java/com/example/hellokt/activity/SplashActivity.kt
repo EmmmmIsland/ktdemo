@@ -2,7 +2,7 @@ package com.example.hellokt.activity
 
 import android.os.Bundle
 import com.example.hellokt.R
-import com.example.hellokt.base.BaseAppBVMActivity
+import com.example.baseproject.base.BaseAppBVMActivity
 import com.example.hellokt.databinding.ActivitySplashBinding
 import com.example.hellokt.viewmodel.SplashViewModel
 

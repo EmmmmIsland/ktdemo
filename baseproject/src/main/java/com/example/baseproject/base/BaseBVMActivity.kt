@@ -1,9 +1,10 @@
-package com.example.hellokt.base
+package com.example.baseproject.base
 
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
-import com.example.hellokt.extensions.observeNonNull
-import com.example.hellokt.extensions.observeNullable
+import com.example.baseproject.extensions.observeNonNull
+import com.example.baseproject.extensions.observeNullable
+import com.example.hellokt.base.ViewBehavior
 
 abstract class BaseBVMActivity<B : ViewDataBinding, VM : BaseViewModel> : BaseBindingActivity<B>(),
     ViewBehavior {

@@ -1,4 +1,4 @@
-package com.example.hellokt.base
+package com.example.baseproject.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
-import com.example.hellokt.extensions.observeNonNull
+import com.example.baseproject.extensions.observeNonNull
+import com.example.hellokt.base.*
 
 abstract class BaseBVMFragment<B : ViewDataBinding, VM : BaseViewModel> : BaseBindingFragment<B>(),
     ViewBehavior {
