@@ -2,22 +2,43 @@ package com.example.hellokt.activity
 
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.view.View
 import com.example.hellokt.R
+import com.example.hellokt.base.BaseAppBVMActivity
+import com.example.hellokt.databinding.ActivityLoginBinding
+import com.example.hellokt.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : BaseActivity(), View.OnClickListener {
+class LoginActivity : BaseAppBVMActivity<ActivityLoginBinding, LoginViewModel>(),
+    View.OnClickListener {
     fun start(context: Context) {
         val i = Intent(context, LoginActivity().javaClass)
         context.startActivity(i)
     }
 
-    override fun initView() {
-        setContentView(R.layout.activity_login)
+    override fun createViewModel(): LoginViewModel {
+        return LoginViewModel()
+    }
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_login
+    }
+
+    override fun bindViewModel() {
+
+    }
+
+    override fun initialize(savedInstanceState: Bundle?) {
+        initView()
+        initData()
+    }
+
+    fun initView() {
         login_by_phone.setOnClickListener(this)
     }
 
-    override fun initData() {
+    fun initData() {
 
     }
 
@@ -28,4 +49,8 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             }
         }
     }
+
+
+
+
 }
