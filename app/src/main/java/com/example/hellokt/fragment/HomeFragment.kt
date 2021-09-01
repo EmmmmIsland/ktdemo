@@ -1,33 +1,33 @@
 package com.example.hellokt.fragment
 
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import com.example.hellokt.R
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.example.hellokt.base.BaseAppBVMFragment
+import com.example.hellokt.databinding.FragmentHomeBinding
+import com.example.hellokt.viewmodel.HomeViewModel
 
-class HomeFragment : Fragment(),View.OnClickListener{
+class HomeFragment : BaseAppBVMFragment<FragmentHomeBinding, HomeViewModel>(), View.OnClickListener {
     var hh = "hello"
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    override fun createViewModel(): HomeViewModel {
+        return HomeViewModel()
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun getLayoutId(): Int {
+        return R.layout.fragment_home
+    }
+
+    override fun initialize(savedInstanceState: Bundle?) {
+        initData()
+    }
+
+    fun initData() {
         val cc = view?.findViewById<TextView>(R.id.tv_gg);
         cc?.setOnClickListener(this)
     }
-
 
     override fun onClick(v: View?) {
         when (v?.id) {
@@ -36,6 +36,4 @@ class HomeFragment : Fragment(),View.OnClickListener{
             }
         }
     }
-
-
 }

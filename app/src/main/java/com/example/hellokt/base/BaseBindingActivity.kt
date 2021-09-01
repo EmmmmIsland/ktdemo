@@ -1,12 +1,10 @@
 package com.example.hellokt.base
 
 import android.content.Intent
-import android.widget.Toast
-import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 
-abstract class BaseBindingActivity<B : ViewDataBinding> : BaseMActivity(),
+abstract class BaseBindingActivity<B : ViewDataBinding> : BaseActivity(),
     ViewBehavior {
 
     protected lateinit var binding: B
