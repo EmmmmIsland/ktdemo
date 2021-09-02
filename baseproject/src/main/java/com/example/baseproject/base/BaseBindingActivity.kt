@@ -5,10 +5,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.example.hellokt.base.ViewBehavior
 
-abstract class BaseBindingActivity<B : ViewDataBinding> : BaseActivity(),
+abstract class BaseBindingActivity<T : ViewDataBinding> : BaseActivity(),
     ViewBehavior {
 
-    protected lateinit var binding: B
+    protected lateinit var binding: T
         private set
 
     override fun initContentView() {

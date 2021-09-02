@@ -5,6 +5,7 @@ import android.app.Application
 import androidx.lifecycle.*
 import com.example.hellokt.base.ViewBehavior
 
+
 abstract class BaseViewModel : ViewModel(), ViewModelLifecycle, ViewBehavior {
 
     // loading视图显示Event
@@ -13,10 +14,6 @@ abstract class BaseViewModel : ViewModel(), ViewModelLifecycle, ViewBehavior {
 
     // 无数据视图显示Event
     var _emptyPageEvent = MutableLiveData<Boolean>()
-        private set
-
-    // toast提示Event
-    var _toastEvent = MutableLiveData<Map<String, *>>()
         private set
 
     // 不带参数的页面跳转Event
