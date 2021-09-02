@@ -4,8 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.example.baseproject.base.BaseBVMActivity
 import com.example.hellokt.R
-import com.example.baseproject.base.BaseAppBVMActivity
 import com.example.hellokt.bottomBar.BottomBarItemView
 import com.example.hellokt.databinding.ActivityMainBinding
 import com.example.hellokt.fragment.HomeFragment
@@ -13,7 +13,7 @@ import com.example.hellokt.fragment.MineFragment
 import com.example.hellokt.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : BaseAppBVMActivity<ActivityMainBinding, MainViewModel>(), View.OnClickListener {
+class MainActivity : BaseBVMActivity<ActivityMainBinding, MainViewModel>(), View.OnClickListener {
     private val a: Int = 2
     private val b = 9
 
@@ -30,8 +30,8 @@ class MainActivity : BaseAppBVMActivity<ActivityMainBinding, MainViewModel>(), V
         return R.layout.activity_main
     }
 
-    override fun bindViewModel() {
-
+    override fun initVariableId(): Int {
+        return 0
     }
 
     override fun initialize(savedInstanceState: Bundle?) {

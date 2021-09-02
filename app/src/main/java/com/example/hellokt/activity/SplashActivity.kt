@@ -1,12 +1,12 @@
 package com.example.hellokt.activity
 
 import android.os.Bundle
+import com.example.baseproject.base.BaseBVMActivity
 import com.example.hellokt.R
-import com.example.baseproject.base.BaseAppBVMActivity
 import com.example.hellokt.databinding.ActivitySplashBinding
 import com.example.hellokt.viewmodel.SplashViewModel
 
-class SplashActivity : BaseAppBVMActivity<ActivitySplashBinding, SplashViewModel>() {
+class SplashActivity : BaseBVMActivity<ActivitySplashBinding, SplashViewModel>() {
     override fun createViewModel(): SplashViewModel {
         return SplashViewModel()
     }
@@ -15,8 +15,8 @@ class SplashActivity : BaseAppBVMActivity<ActivitySplashBinding, SplashViewModel
         return R.layout.activity_splash
     }
 
-    override fun bindViewModel() {
-
+    override fun initVariableId(): Int {
+        return 0
     }
 
     override fun initialize(savedInstanceState: Bundle?) {

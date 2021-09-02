@@ -3,13 +3,13 @@ package com.example.hellokt.fragment
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.example.baseproject.base.BaseBVMFragment
 import com.example.hellokt.R
 import com.example.hellokt.activity.SettingActivity
-import com.example.baseproject.base.BaseAppBVMFragment
 import com.example.hellokt.databinding.FragmentMineBinding
 import com.example.hellokt.viewmodel.MineViewModel
 
-class MineFragment : BaseAppBVMFragment<FragmentMineBinding, MineViewModel>(), View.OnClickListener {
+class MineFragment : BaseBVMFragment<FragmentMineBinding, MineViewModel>(), View.OnClickListener {
 
     override fun createViewModel(): MineViewModel {
         return MineViewModel()

@@ -2,12 +2,8 @@ package com.example.baseproject.base
 
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
-import com.example.baseproject.extensions.observeNonNull
-import com.example.baseproject.extensions.observeNullable
-import com.example.hellokt.base.ViewBehavior
 
-abstract class BaseBVMActivity<B : ViewDataBinding, VM : BaseViewModel> : BaseBindingActivity<B>(),
-    ViewBehavior {
+abstract class BaseBVMActivity<B : ViewDataBinding, VM : BaseViewModel> : BaseBindingActivity<B>(){
 
     protected lateinit var viewModel: VM
         private set
@@ -15,16 +11,16 @@ abstract class BaseBVMActivity<B : ViewDataBinding, VM : BaseViewModel> : BaseBi
     override fun initContentView() {
         super.initContentView()
         injectViewModel()
-        initInternalObserver()
-        bindViewModel()
     }
 
     protected fun injectViewModel() {
         val vm = createViewModel()
         viewModel = ViewModelProvider(this, BaseViewModel.createViewModelFactory(vm))
             .get(vm::class.java)
+        val initVariableId = initVariableId()
         viewModel.application = application
         lifecycle.addObserver(viewModel)
+        binding.setVariable(initVariableId, vm)
     }
 
     override fun onDestroy() {
@@ -33,26 +29,7 @@ abstract class BaseBVMActivity<B : ViewDataBinding, VM : BaseViewModel> : BaseBi
         super.onDestroy()
     }
 
-    protected fun initInternalObserver() {
-        viewModel._loadingEvent.observeNonNull(this) {
-            showLoadingView(it)
-        }
-        viewModel._emptyPageEvent.observeNonNull(this) {
-            showEmptyView(it)
-        }
-
-        viewModel._pageNavigationEvent.observeNonNull(this) {
-            navigate(it)
-        }
-        viewModel._backPressEvent.observeNullable(this) {
-            backPress(it)
-        }
-        viewModel._finishPageEvent.observeNullable(this) {
-            finishPage(it)
-        }
-    }
-
     protected abstract fun createViewModel(): VM
 
-    protected abstract fun bindViewModel()
+    protected abstract fun initVariableId() : Int
 }

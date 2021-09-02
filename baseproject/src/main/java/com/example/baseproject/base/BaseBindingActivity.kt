@@ -1,12 +1,9 @@
 package com.example.baseproject.base
 
-import android.content.Intent
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.example.hellokt.base.ViewBehavior
 
-abstract class BaseBindingActivity<T : ViewDataBinding> : BaseActivity(),
-    ViewBehavior {
+abstract class BaseBindingActivity<T : ViewDataBinding> : BaseActivity(){
 
     protected lateinit var binding: T
         private set
@@ -23,17 +20,5 @@ abstract class BaseBindingActivity<T : ViewDataBinding> : BaseActivity(),
     override fun onDestroy() {
         binding.unbind()
         super.onDestroy()
-    }
-
-    override fun navigate(page: Any) {
-        startActivity(Intent(this, page as Class<*>))
-    }
-
-    override fun backPress(arg: Any?) {
-        onBackPressed()
-    }
-
-    override fun finishPage(arg: Any?) {
-        finish()
     }
 }

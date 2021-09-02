@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.example.baseproject.base.BaseBVMFragment
 import com.example.hellokt.R
-import com.example.baseproject.base.BaseAppBVMFragment
 import com.example.hellokt.databinding.FragmentHomeBinding
 import com.example.hellokt.viewmodel.HomeViewModel
 
-class HomeFragment : BaseAppBVMFragment<FragmentHomeBinding, HomeViewModel>(), View.OnClickListener {
+class HomeFragment : BaseBVMFragment<FragmentHomeBinding, HomeViewModel>(), View.OnClickListener {
     var hh = "hello"
 
     override fun createViewModel(): HomeViewModel {

@@ -3,15 +3,13 @@ package com.example.hellokt.activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import com.example.baseproject.base.BaseBVMActivity
+import com.example.hellokt.BR
 import com.example.hellokt.R
-import com.example.baseproject.base.BaseAppBVMActivity
 import com.example.hellokt.databinding.ActivityLoginBinding
 import com.example.hellokt.viewmodel.LoginViewModel
-import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : BaseAppBVMActivity<ActivityLoginBinding, LoginViewModel>(),
-    View.OnClickListener {
+class LoginActivity : BaseBVMActivity<ActivityLoginBinding, LoginViewModel>() {
     fun start(context: Context) {
         val i = Intent(context, LoginActivity().javaClass)
         context.startActivity(i)
@@ -25,8 +23,8 @@ class LoginActivity : BaseAppBVMActivity<ActivityLoginBinding, LoginViewModel>()
         return R.layout.activity_login
     }
 
-    override fun bindViewModel() {
-
+    override fun initVariableId(): Int {
+        return BR.loginVm
     }
 
     override fun initialize(savedInstanceState: Bundle?) {
@@ -35,22 +33,11 @@ class LoginActivity : BaseAppBVMActivity<ActivityLoginBinding, LoginViewModel>()
     }
 
     fun initView() {
-        login_by_phone.setOnClickListener(this)
+
     }
 
     fun initData() {
 
     }
-
-    override fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.login_by_phone -> {
-                MainActivity().start(this)
-            }
-        }
-    }
-
-
-
 
 }

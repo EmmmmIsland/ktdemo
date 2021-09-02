@@ -1,13 +1,14 @@
 package com.example.hellokt.activity
 
 import android.os.Bundle
+import com.example.baseproject.base.BaseBVMActivity
+import com.example.hellokt.BR
 import com.example.hellokt.R
-import com.example.baseproject.base.BaseAppBVMActivity
 import com.example.hellokt.databinding.ActivitySettingBinding
 import com.example.hellokt.model.User
 import com.example.hellokt.viewmodel.SettingViewModel
 
-class SettingActivity : BaseAppBVMActivity<ActivitySettingBinding, SettingViewModel>() {
+class SettingActivity : BaseBVMActivity<ActivitySettingBinding, SettingViewModel>() {
 
     override fun createViewModel(): SettingViewModel {
         return SettingViewModel()
@@ -17,8 +18,8 @@ class SettingActivity : BaseAppBVMActivity<ActivitySettingBinding, SettingViewMo
         return R.layout.activity_setting
     }
 
-    override fun bindViewModel() {
-        binding.settingVm = SettingViewModel()
+    override fun initVariableId(): Int {
+        return BR.settingVm
     }
 
     override fun initialize(savedInstanceState: Bundle?) {
