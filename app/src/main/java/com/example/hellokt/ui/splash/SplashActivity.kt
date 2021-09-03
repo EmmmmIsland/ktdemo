@@ -6,7 +6,6 @@ import com.example.baseproject.base.BaseBVMActivity
 import com.example.baseproject.router.ARouterConfig
 import com.example.hellokt.R
 import com.example.hellokt.databinding.ActivitySplashBinding
-import com.example.hellokt.ui.splash.SplashViewModel
 
 class SplashActivity : BaseBVMActivity<ActivitySplashBinding, SplashViewModel>() {
     override fun createViewModel(): SplashViewModel {

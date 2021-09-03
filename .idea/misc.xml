@@ -9,8 +9,11 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.271875" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.271875" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.11458333333333333" />
+        <entry key="app/src/main/res/layout/bottom_bar_item.xml" value="0.1421875" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.271875" />
         <entry key="app/src/main/res/layout/fragment_mine.xml" value="0.271875" />
+        <entry key="baseProject/src/main/res/drawable/ic_arrow.xml" value="0.1515625" />
+        <entry key="baseProject/src/main/res/drawable/ic_arrow_black.xml" value="0.1515625" />
       </map>
     </option>
   </component>
