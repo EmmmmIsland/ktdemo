@@ -17,10 +17,9 @@ abstract class BaseBVMActivity<B : ViewDataBinding, VM : BaseViewModel> : BaseBi
         val vm = createViewModel()
         viewModel = ViewModelProvider(this, BaseViewModel.createViewModelFactory(vm))
             .get(vm::class.java)
-        val initVariableId = initVariableId()
         viewModel.application = application
         lifecycle.addObserver(viewModel)
-        binding.setVariable(initVariableId, vm)
+        binding.setVariable(initVariableId(), vm)
     }
 
     override fun onDestroy() {

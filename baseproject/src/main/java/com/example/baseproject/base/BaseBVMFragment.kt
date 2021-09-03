@@ -34,6 +34,7 @@ abstract class BaseBVMFragment<B : ViewDataBinding, VM : BaseViewModel> : BaseBi
             .get(vm::class.java)
         viewModel.application = activity!!.application
         lifecycle.addObserver(viewModel)
+        binding.setVariable(initVariableId(), vm)
     }
 
     override fun onDestroy() {
@@ -42,4 +43,6 @@ abstract class BaseBVMFragment<B : ViewDataBinding, VM : BaseViewModel> : BaseBi
     }
 
     protected abstract fun createViewModel(): VM;
+
+    protected abstract fun initVariableId() : Int
 }
