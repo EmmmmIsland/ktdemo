@@ -1,4 +1,4 @@
-package com.example.hellokt.activity
+package com.example.hellokt.ui.splash
 
 import android.os.Bundle
 import com.alibaba.android.arouter.launcher.ARouter
@@ -6,7 +6,7 @@ import com.example.baseproject.base.BaseBVMActivity
 import com.example.baseproject.router.ARouterConfig
 import com.example.hellokt.R
 import com.example.hellokt.databinding.ActivitySplashBinding
-import com.example.hellokt.viewmodel.SplashViewModel
+import com.example.hellokt.ui.splash.SplashViewModel
 
 class SplashActivity : BaseBVMActivity<ActivitySplashBinding, SplashViewModel>() {
     override fun createViewModel(): SplashViewModel {

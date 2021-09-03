@@ -1,4 +1,4 @@
-package com.example.hellokt.activity
+package com.example.hellokt.ui.main
 
 import android.content.Context
 import android.content.Intent
@@ -10,9 +10,8 @@ import com.example.baseproject.router.ARouterConfig
 import com.example.hellokt.R
 import com.example.hellokt.bottomBar.BottomBarItemView
 import com.example.hellokt.databinding.ActivityMainBinding
-import com.example.hellokt.fragment.HomeFragment
-import com.example.hellokt.fragment.MineFragment
-import com.example.hellokt.viewmodel.MainViewModel
+import com.example.hellokt.ui.homefragment.HomeFragment
+import com.example.hellokt.ui.minefragment.MineFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 @Route(path = ARouterConfig.AROUTER_PATH_MAIN_ACTIVITY)

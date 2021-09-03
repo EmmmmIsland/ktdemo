@@ -6,7 +6,7 @@
 
         <variable
             name="mineVm"
-            type="com.example.hellokt.viewmodel.MineViewModel" />
+            type="com.example.hellokt.ui.minefragment.MineViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

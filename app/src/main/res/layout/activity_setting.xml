@@ -11,7 +11,7 @@
 
         <variable
             name="settingVm"
-            type="com.example.hellokt.viewmodel.SettingViewModel" />
+            type="com.example.hellokt.ui.setting.SettingViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

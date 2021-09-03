@@ -1,4 +1,4 @@
-package com.example.hellokt.viewmodel
+package com.example.hellokt.ui.splash
 
 import com.example.baseproject.base.BaseViewModel
 

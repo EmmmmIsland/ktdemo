@@ -1,4 +1,4 @@
-package com.example.hellokt.viewmodel
+package com.example.hellokt.ui.homefragment
 
 import android.view.View
 import android.widget.Toast

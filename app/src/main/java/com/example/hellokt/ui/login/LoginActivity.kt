@@ -1,4 +1,4 @@
-package com.example.hellokt.activity
+package com.example.hellokt.ui.login
 
 import android.content.Context
 import android.content.Intent
@@ -9,7 +9,6 @@ import com.example.baseproject.router.ARouterConfig
 import com.example.hellokt.BR
 import com.example.hellokt.R
 import com.example.hellokt.databinding.ActivityLoginBinding
-import com.example.hellokt.viewmodel.LoginViewModel
 
 @Route(path = ARouterConfig.AROUTER_PATH_LOGIN_ACTIVITY)
 class LoginActivity : BaseBVMActivity<ActivityLoginBinding, LoginViewModel>() {

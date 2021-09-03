@@ -4,7 +4,7 @@
     <data>
         <variable
             name="homeVm"
-            type="com.example.hellokt.viewmodel.HomeViewModel" />
+            type="com.example.hellokt.ui.homefragment.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

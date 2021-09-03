@@ -1,11 +1,10 @@
-package com.example.hellokt.fragment
+package com.example.hellokt.ui.homefragment
 
 import android.os.Bundle
 import com.example.baseproject.base.BaseBVMFragment
 import com.example.hellokt.BR
 import com.example.hellokt.R
 import com.example.hellokt.databinding.FragmentHomeBinding
-import com.example.hellokt.viewmodel.HomeViewModel
 
 class HomeFragment : BaseBVMFragment<FragmentHomeBinding, HomeViewModel>() {
 

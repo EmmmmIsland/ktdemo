@@ -1,4 +1,4 @@
-package com.example.hellokt.viewmodel
+package com.example.hellokt.ui.minefragment
 
 import android.view.View
 import com.alibaba.android.arouter.launcher.ARouter
@@ -10,5 +10,4 @@ class MineViewModel : BaseViewModel() {
     fun routerSetting(v:View){
         ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_SETTING_ACTIVITY).navigation()
     }
-
 }

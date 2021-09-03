@@ -1,4 +1,4 @@
-package com.example.hellokt.activity
+package com.example.hellokt.ui.setting
 
 import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
@@ -8,7 +8,7 @@ import com.example.hellokt.BR
 import com.example.hellokt.R
 import com.example.hellokt.databinding.ActivitySettingBinding
 import com.example.hellokt.model.User
-import com.example.hellokt.viewmodel.SettingViewModel
+import com.example.hellokt.ui.setting.SettingViewModel
 
 @Route(path = ARouterConfig.AROUTER_PATH_SETTING_ACTIVITY)
 class SettingActivity : BaseBVMActivity<ActivitySettingBinding, SettingViewModel>() {
