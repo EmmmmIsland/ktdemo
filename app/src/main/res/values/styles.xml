@@ -8,7 +8,7 @@
     </style>
 
     <style name="SplashAppTheme" parent="@style/AppTheme">
-        <item name="android:windowBackground">@drawable/splash_o</item>
+        <item name="android:windowBackground">#ddd</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

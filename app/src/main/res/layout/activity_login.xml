@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/SandyBrown">
+        android:background="@drawable/main_bg">
 
         <TextView
             android:id="@+id/tv_login_phone_text"
@@ -21,8 +21,9 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="60dp"
             android:text="手机号"
-            android:textColor="#F7F6F5"
+            android:textColor="#000000"
             android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +34,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="13dp"
             android:layout_marginRight="40dp"
-            android:background="@drawable/purple_btn"
+            android:background="#33333333"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_login_phone_text" />
@@ -68,25 +69,14 @@
             app:layout_constraintRight_toRightOf="@id/v_edit_text_bg"
             app:layout_constraintTop_toTopOf="@id/v_edit_text_bg" />
 
-        <View
-            android:id="@+id/v_code_bg"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/purple_btn"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/v_edit_text_bg" />
 
         <EditText
             android:id="@+id/et_code"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:background="@null"
+            android:layout_marginTop="10dp"
+            android:background="#33333333"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:inputType="phone|number"
@@ -94,25 +84,25 @@
             android:textColor="#FBFAF8"
             android:textColorHint="#9C7EA0"
             android:textSize="14dp"
-            app:layout_constraintBottom_toBottomOf="@id/v_code_bg"
-            app:layout_constraintLeft_toLeftOf="@id/v_code_bg"
-            app:layout_constraintRight_toRightOf="@id/v_code_bg"
-            app:layout_constraintTop_toTopOf="@id/v_code_bg" />
+            app:layout_constraintLeft_toLeftOf="@id/v_edit_text_bg"
+            app:layout_constraintRight_toRightOf="@id/v_edit_text_bg"
+            app:layout_constraintTop_toBottomOf="@id/v_edit_text_bg" />
 
 
         <Button
             android:id="@+id/login_by_phone"
-            android:layout_width="295dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginTop="70dp"
-            android:background="@drawable/purple_btn"
+            android:background="#33333333"
             android:onClick="@{loginVm::onClickLogin}"
             android:text="登录"
-            android:textColor="@color/white"
+            android:textColor="#000"
             android:textSize="18sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/v_code_bg" />
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/et_code"
+            app:layout_constraintRight_toRightOf="@id/et_code"
+            app:layout_constraintTop_toBottomOf="@id/et_code" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
