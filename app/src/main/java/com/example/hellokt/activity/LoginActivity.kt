@@ -3,12 +3,15 @@ package com.example.hellokt.activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.baseproject.base.BaseBVMActivity
+import com.example.baseproject.router.ARouterConfig
 import com.example.hellokt.BR
 import com.example.hellokt.R
 import com.example.hellokt.databinding.ActivityLoginBinding
 import com.example.hellokt.viewmodel.LoginViewModel
 
+@Route(path = ARouterConfig.AROUTER_PATH_LOGIN_ACTIVITY)
 class LoginActivity : BaseBVMActivity<ActivityLoginBinding, LoginViewModel>() {
     fun start(context: Context) {
         val i = Intent(context, LoginActivity().javaClass)

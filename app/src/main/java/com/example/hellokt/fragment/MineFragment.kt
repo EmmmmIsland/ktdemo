@@ -3,7 +3,9 @@ package com.example.hellokt.fragment
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.alibaba.android.arouter.launcher.ARouter
 import com.example.baseproject.base.BaseBVMFragment
+import com.example.baseproject.router.ARouterConfig.Companion.AROUTER_PATH_SETTING_ACTIVITY
 import com.example.hellokt.R
 import com.example.hellokt.activity.SettingActivity
 import com.example.hellokt.databinding.FragmentMineBinding
@@ -30,8 +32,7 @@ class MineFragment : BaseBVMFragment<FragmentMineBinding, MineViewModel>(), View
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.tv_setting -> {
-                val i = Intent(context, SettingActivity().javaClass)
-                startActivity(i)
+                ARouter.getInstance().build(AROUTER_PATH_SETTING_ACTIVITY).navigation()
             }
         }
     }

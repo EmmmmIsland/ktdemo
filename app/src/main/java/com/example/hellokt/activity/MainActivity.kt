@@ -4,7 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.baseproject.base.BaseBVMActivity
+import com.example.baseproject.router.ARouterConfig
 import com.example.hellokt.R
 import com.example.hellokt.bottomBar.BottomBarItemView
 import com.example.hellokt.databinding.ActivityMainBinding
@@ -13,6 +15,7 @@ import com.example.hellokt.fragment.MineFragment
 import com.example.hellokt.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
+@Route(path = ARouterConfig.AROUTER_PATH_MAIN_ACTIVITY)
 class MainActivity : BaseBVMActivity<ActivityMainBinding, MainViewModel>(), View.OnClickListener {
     private val a: Int = 2
     private val b = 9
