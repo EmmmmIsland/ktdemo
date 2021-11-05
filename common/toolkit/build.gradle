@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    def versions = rootProject.ext.versions
+    compileSdk versions.compileSdkVersion
+
+    defaultConfig {
+        minSdk versions.minSdkVersion
+        targetSdk versions.targetSdkVersion
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    def deps = rootProject.ext.deps
+
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
+
+    implementation deps.recyclerview
+    implementation deps.transition
+    implementation deps.coreKtx
+    implementation deps.material
+
+    implementation "com.google.android.gms:play-services-ads-identifier:17.1.0"
+
+    api deps.Gson
+    api deps.MMKV
+    api deps.LiveEventBus
+
+    api deps.Glide
+    implementation deps.rxPermission
+    implementation deps.rxJava
+    implementation deps.rxAndroid
+}

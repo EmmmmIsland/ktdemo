@@ -14,6 +14,8 @@
         <entry key="app/src/main/res/layout/fragment_mine.xml" value="0.271875" />
         <entry key="baseProject/src/main/res/drawable/ic_arrow.xml" value="0.1515625" />
         <entry key="baseProject/src/main/res/drawable/ic_arrow_black.xml" value="0.1515625" />
+        <entry key="common/toolkit/src/main/res/drawable/framework_bg_smtoast.xml" value="0.29074074074074074" />
+        <entry key="common/toolkit/src/main/res/layout/framework_view_smtoast.xml" value="0.28802083333333334" />
       </map>
     </option>
   </component>

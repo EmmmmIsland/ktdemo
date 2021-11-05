@@ -1,3 +1,4 @@
 include ':app'
 include ':baseProject'
+include ':common:toolkit'
 rootProject.name = "HelloKt"
