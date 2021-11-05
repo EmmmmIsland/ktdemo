@@ -89,5 +89,5 @@ private fun Toast.showSafe() {
 
 
 private fun isN_MR1(): Boolean {
-    return SystemUtils.isN_MR1()
+    return SystemUtils.isN_MR1
 }

@@ -1,0 +1,66 @@
+package com.demo.toolkit.toast
+
+import android.content.Context
+import android.content.ContextWrapper
+import android.util.Log
+import android.view.Display
+import android.view.View
+import android.view.ViewGroup
+import android.view.WindowManager
+import android.widget.Toast
+
+internal class SafeToastContext(base: Context, private val toast: Toast) :
+    ContextWrapper(base) {
+    private val TAG = "WindowManagerWrapper"
+    private var badTokenListener: BadTokenListener? = null
+    override fun getApplicationContext(): Context {
+        return ApplicationContextWrapper(baseContext.applicationContext)
+    }
+
+    fun setBadTokenListener(badTokenListener: BadTokenListener) {
+        this.badTokenListener = badTokenListener
+    }
+
+    private inner class ApplicationContextWrapper(base: Context) :
+        ContextWrapper(base) {
+        override fun getSystemService(name: String): Any {
+            return if (WINDOW_SERVICE == name) {
+                // noinspection ConstantConditions
+                WindowManagerWrapper(baseContext.getSystemService(name) as WindowManager)
+            } else super.getSystemService(name)
+        }
+    }
+
+    private inner class WindowManagerWrapper(private val base: WindowManager) :
+        WindowManager {
+        override fun getDefaultDisplay(): Display {
+            return base.defaultDisplay
+        }
+
+        override fun removeViewImmediate(view: View) {
+            base.removeViewImmediate(view)
+        }
+
+        override fun addView(view: View, params: ViewGroup.LayoutParams) {
+            try {
+                Log.d(TAG, "WindowManager's addView(view, params) has been hooked.")
+                base.addView(view, params)
+            } catch (e: WindowManager.BadTokenException) {
+                Log.i(TAG, e.message!!)
+                if (badTokenListener != null) {
+                    badTokenListener!!.onBadTokenCaught(toast)
+                }
+            } catch (throwable: Throwable) {
+                Log.e(TAG, "[addView]", throwable)
+            }
+        }
+
+        override fun updateViewLayout(view: View, params: ViewGroup.LayoutParams) {
+            base.updateViewLayout(view, params)
+        }
+
+        override fun removeView(view: View) {
+            base.removeView(view)
+        }
+    }
+}

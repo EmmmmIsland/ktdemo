@@ -8,7 +8,7 @@ import com.example.baseproject.router.ARouterConfig
 
 class LoginViewModel : BaseViewModel() {
     fun onClickLogin(v: View){
+        toast("login")
         ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_MAIN_ACTIVITY).navigation()
     }
-
 }
