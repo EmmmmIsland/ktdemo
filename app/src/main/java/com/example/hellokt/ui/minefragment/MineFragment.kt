@@ -20,9 +20,6 @@ class MineFragment : BaseBVMFragment<FragmentMineBinding, MineViewModel>() {
         return BR.mineVm
     }
 
-    override fun initialize(savedInstanceState: Bundle?) {
-
-    }
 
 
 }

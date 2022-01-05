@@ -20,8 +20,6 @@ class HomeFragment : BaseBVMFragment<FragmentHomeBinding, HomeViewModel>() {
         return BR.homeVm
     }
 
-    override fun initialize(savedInstanceState: Bundle?) {
 
-    }
 
 }

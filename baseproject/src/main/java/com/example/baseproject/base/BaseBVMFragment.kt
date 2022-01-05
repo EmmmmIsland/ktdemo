@@ -23,7 +23,6 @@ abstract class BaseBVMFragment<B : ViewDataBinding, VM : BaseViewModel> : BaseBi
         }
         injectDataBinding(inflater, container)
         injectViewModel()
-        initialize(savedInstanceState)
         doLazyLoad(false)
         return getRootView()
     }

@@ -23,7 +23,6 @@ abstract class BaseBindingFragment<B : ViewDataBinding> : BaseFragment() {
             return getRootView()
         }
         injectDataBinding(inflater, container)
-        initialize(savedInstanceState)
         doLazyLoad(false)
         return getRootView()
     }

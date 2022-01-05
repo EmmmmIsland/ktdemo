@@ -99,7 +99,8 @@ abstract class BaseFragment : Fragment(), ILazyLoad {
             return rootView
         }
         rootView = inflater.inflate(getLayoutId(), container, false)
-        initialize(savedInstanceState)
+        initView()
+        initData()
         doLazyLoad(false)
         return rootView
     }
@@ -148,12 +149,11 @@ abstract class BaseFragment : Fragment(), ILazyLoad {
     protected abstract @LayoutRes
     fun getLayoutId(): Int
 
-    /**
-     *  初始化操作
-     */
-    protected abstract fun initialize(savedInstanceState: Bundle?)
 
     override fun lazyLoad() {
 
     }
+
+    open fun initView(){}
+    open fun initData(){}
 }
