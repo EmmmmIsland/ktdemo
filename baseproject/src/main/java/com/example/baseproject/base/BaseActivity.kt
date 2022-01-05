@@ -9,7 +9,7 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initContentView()
-        initialize(savedInstanceState)
+        initialize()
     }
 
     protected open fun initContentView() {
@@ -22,5 +22,11 @@ abstract class BaseActivity : AppCompatActivity() {
     /**
      *  初始化操作
      */
-    protected abstract fun initialize(savedInstanceState: Bundle?)
+    fun initialize(){
+        initView()
+        initData()
+    }
+
+    open fun initView(){}
+    open fun initData(){}
 }

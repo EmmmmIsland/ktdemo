@@ -1,6 +1,5 @@
 package com.example.hellokt.ui.splash
 
-import android.os.Bundle
 import com.alibaba.android.arouter.launcher.ARouter
 import com.example.baseproject.base.BaseBVMActivity
 import com.example.baseproject.router.ARouterConfig
@@ -20,17 +19,13 @@ class SplashActivity : BaseBVMActivity<ActivitySplashBinding, SplashViewModel>()
         return 0
     }
 
-    override fun initialize(savedInstanceState: Bundle?) {
-        initView()
-        initData()
-    }
 
-    fun initView() {
+    override fun initView() {
         ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_LOGIN_ACTIVITY).navigation()
         finish()
     }
 
-    fun initData() {
+    override fun initData() {
 
     }
 

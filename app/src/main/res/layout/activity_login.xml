@@ -95,7 +95,6 @@
             android:layout_height="50dp"
             android:layout_marginTop="70dp"
             android:background="#33333333"
-            android:onClick="@{loginVm::onClickLogin}"
             android:text="登录"
             android:textColor="#000"
             android:textSize="18sp"

@@ -2,8 +2,9 @@ package com.example.hellokt.ui.login
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
+import com.demo.toolkit.ext.onClickSafe
 import com.example.baseproject.base.BaseBVMActivity
 import com.example.baseproject.router.ARouterConfig
 import com.example.hellokt.BR
@@ -29,17 +30,13 @@ class LoginActivity : BaseBVMActivity<ActivityLoginBinding, LoginViewModel>() {
         return BR.loginVm
     }
 
-    override fun initialize(savedInstanceState: Bundle?) {
-        initView()
-        initData()
+    override fun initView() {
+        binding.loginByPhone.onClickSafe {
+            ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_MAIN_ACTIVITY).navigation()
+        }
     }
 
-    fun initView() {
+    override fun initData() {
 
     }
-
-    fun initData() {
-
-    }
-
 }

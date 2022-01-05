@@ -2,7 +2,6 @@ package com.example.hellokt.ui.main
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.view.View
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.baseproject.base.BaseBVMActivity
@@ -36,13 +35,8 @@ class MainActivity : BaseBVMActivity<ActivityMainBinding, MainViewModel>(), View
         return 0
     }
 
-    override fun initialize(savedInstanceState: Bundle?) {
-        initView()
-        initData()
-    }
 
-
-    fun initView() {
+    override fun initView() {
 //        setContentView(R.layout.activity_main)
 //        val frameLayout = findViewById<FrameLayout>(R.id.base_content_view)
 
@@ -60,7 +54,7 @@ class MainActivity : BaseBVMActivity<ActivityMainBinding, MainViewModel>(), View
         //        Toast.makeText(applicationContext, "hello", Toast.LENGTH_LONG).show();
     }
 
-    fun initData() {
+    override fun initData() {
 
     }
 
