@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <data>
-        <variable
-            name="homeVm"
-            type="com.example.hellokt.ui.homefragment.HomeViewModel" />
-    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MistyRose">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/tv_gg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/MistyRose">
+        android:layout_height="40dp"
+        android:layout_marginTop="240dp"
+        android:background="#445566"
+        android:clickable="true"
+        android:onClick="@{homeVm::btnClick}"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_gg"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="240dp"
-            android:background="#445566"
-            android:clickable="true"
-            android:onClick="@{homeVm::btnClick}"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</layout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,24 +1,18 @@
 package com.example.hellokt.ui.minefragment
 
-import android.os.Bundle
-import com.example.baseproject.base.BaseBVMFragment
-import com.example.hellokt.BR
-import com.example.hellokt.R
-import com.example.hellokt.databinding.FragmentMineBinding
+import androidx.fragment.app.FragmentActivity
 
-class MineFragment : BaseBVMFragment<FragmentMineBinding, MineViewModel>() {
+class MineFragment : FragmentActivity() {
 
-    override fun createViewModel(): MineViewModel {
-        return MineViewModel()
-    }
+//    override fun createViewModel(): MineViewModel {
+//        return MineViewModel()
+//    }
+//
+//    override fun getLayoutId(): Int {
+//        return R.layout.fragment_mine
+//    }
 
-    override fun getLayoutId(): Int {
-        return R.layout.fragment_mine
-    }
 
-    override fun initVariableId(): Int {
-        return BR.mineVm
-    }
 
 
 

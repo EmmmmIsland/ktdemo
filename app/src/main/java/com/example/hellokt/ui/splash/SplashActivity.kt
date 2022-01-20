@@ -1,26 +1,16 @@
 package com.example.hellokt.ui.splash
 
+import android.os.Bundle
 import com.alibaba.android.arouter.launcher.ARouter
-import com.example.baseproject.base.BaseBVMActivity
+import com.example.baseproject.base.BaseVmActivity
 import com.example.baseproject.router.ARouterConfig
-import com.example.hellokt.R
 import com.example.hellokt.databinding.ActivitySplashBinding
 
-class SplashActivity : BaseBVMActivity<ActivitySplashBinding, SplashViewModel>() {
-    override fun createViewModel(): SplashViewModel {
-        return SplashViewModel()
-    }
+class SplashActivity : BaseVmActivity<ActivitySplashBinding>() {
+    override fun getLayout(): ActivitySplashBinding = ActivitySplashBinding.inflate(layoutInflater)
 
-    override fun getLayoutId(): Int {
-        return R.layout.activity_splash
-    }
-
-    override fun initVariableId(): Int {
-        return 0
-    }
-
-
-    override fun initView() {
+    override fun initView(savedInstanceState: Bundle?) {
+        super.initView(savedInstanceState)
         ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_LOGIN_ACTIVITY).navigation()
         finish()
     }
@@ -28,6 +18,4 @@ class SplashActivity : BaseBVMActivity<ActivitySplashBinding, SplashViewModel>()
     override fun initData() {
 
     }
-
-
 }

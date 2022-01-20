@@ -55,4 +55,5 @@ dependencies {
     //ARouter
     api 'com.alibaba:arouter-api:1.5.1'
     kapt 'com.alibaba:arouter-compiler:1.5.1'
+
 }
