@@ -5,14 +5,25 @@
     android:layout_height="match_parent"
     android:background="@color/MistyRose">
 
+
+<com.example.baseproject.view.TranslucentTopBar
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        style="@style/CommonToolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</com.example.baseproject.view.TranslucentTopBar>
+
     <TextView
         android:id="@+id/tv_gg"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="240dp"
         android:background="#445566"
-        android:clickable="true"
-        android:onClick="@{homeVm::btnClick}"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

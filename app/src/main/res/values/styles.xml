@@ -12,4 +12,32 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <style name="CommonToolbarStyle" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@color/c_FF333333</item>
+        <item name="titleTextAppearance">@style/CommonToolbarLargeTextAppearance</item>
+        <item name="navigationIcon">@drawable/navigation_back_selector</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentPaddingLeft">0dp</item>
+        <item name="titleMarginStart">0dp</item>
+        <item name="tint">@color/black</item>
+    </style>
+
+    <!--白色返回按钮和白色的文本-->
+    <style name="CommonWhiteToolbarStyle" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@color/white</item>
+        <item name="titleTextAppearance">@style/CommonToolbarLargeTextAppearance</item>
+        <item name="navigationIcon">@drawable/navigation_back_white_selector</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentPaddingLeft">0dp</item>
+        <item name="titleMarginStart">0dp</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+    <style name="CommonToolbarLargeTextAppearance">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

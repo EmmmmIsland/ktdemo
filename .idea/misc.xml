@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/common_icon_navigation_back_selector.xml" value="0.3" />
+        <entry key="app/src/main/res/drawable/common_icon_navigation_back_white_selector.xml" value="0.3" />
         <entry key="app/src/main/res/drawable/main_bg.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/drawable/purple_btn.xml" value="0.28802083333333334" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.271875" />
@@ -14,6 +16,7 @@
         <entry key="app/src/main/res/layout/fragment_mine.xml" value="0.271875" />
         <entry key="baseProject/src/main/res/drawable/ic_arrow.xml" value="0.1515625" />
         <entry key="baseProject/src/main/res/drawable/ic_arrow_black.xml" value="0.1515625" />
+        <entry key="baseproject/src/main/res/drawable/tool_bar_bg.xml" value="0.3" />
         <entry key="common/toolkit/src/main/res/drawable/framework_bg_smtoast.xml" value="0.29074074074074074" />
         <entry key="common/toolkit/src/main/res/layout/framework_view_smtoast.xml" value="0.28802083333333334" />
       </map>

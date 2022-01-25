@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--通栏，6.0系统以上的statusbar变成24dp -->
+    <dimen name="top_bar_height">72dp</dimen>
+    <dimen name="top_bar_padding_top">24dp</dimen>
+</resources>

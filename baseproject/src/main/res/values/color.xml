@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="c_white_05">#1fFFFFFF</color>
+    <color name="c_white_08">#14FFFFFF</color>
+    <color name="c_white_10">#1aFFFFFF</color>
+    <color name="c_white_15">#26FFFFFF</color>
+    <color name="c_white_20">#33FFFFFF</color>
+    <color name="c_white_30">#4CFFFFFF</color>
+    <color name="c_white_40">#66FFFFFF</color>
+    <color name="c_white_50">#80FFFFFF</color>
+    <color name="c_white_60">#98FFFFFF</color>
+    <color name="c_white_80">#CCFFFFFF</color>
+    <color name="c_white_90">#E6FFFFFF</color>
+    <color name="c_black_05">#1f000000</color>
+    <color name="c_black_15">#26000000</color>
+    <color name="c_black_20">#33000000</color>
+    <color name="c_black_25">#44000000</color>
+    <color name="c_black_30">#4C000000</color>
+    <color name="c_black_40">#66000000</color>
+    <color name="c_black_50">#80000000</color>
+    <color name="c_black_60">#99000000</color>
+    <color name="c_black_70">#B2000000</color>
+    <color name="c_black_80">#CC000000</color>
+    <color name="c_black_90">#E6000000</color>
+
+    <color name="c_FF333333">#FF333333</color>
+
+
+</resources>

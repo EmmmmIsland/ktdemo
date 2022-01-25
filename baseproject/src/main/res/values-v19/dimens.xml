@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--通栏，4.4系统以上的顶部栏定义-->
+    <dimen name="top_bar_height">73dp</dimen>
+    <dimen name="top_bar_padding_top">25dp</dimen>
+
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--通栏，8.0系统的statusbar变成25dp -->
+    <dimen name="top_bar_height">73dp</dimen>
+    <dimen name="top_bar_padding_top">25dp</dimen>
+</resources>
