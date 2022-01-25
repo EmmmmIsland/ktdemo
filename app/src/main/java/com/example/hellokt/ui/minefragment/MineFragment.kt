@@ -1,19 +1,17 @@
 package com.example.hellokt.ui.minefragment
 
-import androidx.fragment.app.FragmentActivity
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import com.example.baseproject.base.BaseFragment
+import com.example.hellokt.databinding.FragmentMineBinding
 
-class MineFragment : FragmentActivity() {
+class MineFragment : BaseFragment<FragmentMineBinding>() {
+    override fun getLayout(inflater: LayoutInflater, container: ViewGroup?): FragmentMineBinding =
+        FragmentMineBinding.inflate(layoutInflater)
 
-//    override fun createViewModel(): MineViewModel {
-//        return MineViewModel()
-//    }
-//
-//    override fun getLayoutId(): Int {
-//        return R.layout.fragment_mine
-//    }
-
-
-
-
+    private val viewModel: MineViewModel by lazy {
+        ViewModelProvider(this).get(MineViewModel::class.java)
+    }
 
 }

@@ -26,14 +26,14 @@ class MainActivity : BaseVmActivity<ActivityMainBinding>(), View.OnClickListener
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
-//        bottom_bar.setSourceFrameLayout(this, R.id.base_content_view)
-//            ?.addItemView(BottomBarItemView(this, "主页", R.drawable.home_page_selector),
-//                HomeFragment().javaClass.newInstance())
-//            ?.addItemView(BottomBarItemView(this, "我的", R.drawable.mine_page_selector),
-//                MineFragment().javaClass.newInstance())
-//            ?.initialise()
-//
-//        bottom_bar.setSelected(0)
+        bottom_bar.setSourceFrameLayout(this, R.id.base_content_view)
+            ?.addItemView(BottomBarItemView(this, "主页", R.drawable.home_page_selector),
+                HomeFragment().javaClass.newInstance())
+            ?.addItemView(BottomBarItemView(this, "我的", R.drawable.mine_page_selector),
+                MineFragment().javaClass.newInstance())
+            ?.initialise()
+
+        bottom_bar.setSelected(0)
     }
 
     override fun initData() {
