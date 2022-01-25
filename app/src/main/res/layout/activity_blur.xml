@@ -4,10 +4,25 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        app:layout_constraintTop_toTopOf="parent"
+    <com.example.baseproject.view.TranslucentTopBar
+        android:id="@+id/top_bar"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            style="@style/CommonToolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.example.baseproject.view.TranslucentTopBar>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        android:layout_width="match_parent"
+        android:gravity="center"
         android:text="blll"
-        android:layout_height="wrap_content"/>
+        android:layout_height="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
