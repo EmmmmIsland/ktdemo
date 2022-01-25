@@ -8,7 +8,6 @@ import android.content.Context
 import android.graphics.Paint
 import android.graphics.Rect
 import android.os.Build
-import android.text.SpannableStringBuilder
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
@@ -29,7 +28,7 @@ import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.bumptech.glide.request.RequestOptions
 import com.demo.toolkit.util.ResourceUtils
 import com.ebook.toolkit.R
-import com.ebook.toolkit.glide.GlideRoundTransform
+import com.demo.toolkit.glide.GlideRoundTransform
 
 internal object ViewClickSafe {
     var hash: Int = 0

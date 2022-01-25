@@ -1,8 +1,11 @@
 package com.example.hellokt.ui.homefragment
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import com.demo.toolkit.ext.onClickSafe
+import com.demo.toolkit.ext.toast
 import com.example.baseproject.base.BaseFragment
 import com.example.hellokt.databinding.FragmentHomeBinding
 
@@ -13,4 +16,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         ViewModelProvider(this).get(HomeViewModel::class.java)
     }
 
+    override fun initView(savedInstanceState: Bundle?) {
+        super.initView(savedInstanceState)
+        binding.tvGg.onClickSafe {
+            toast("dd")
+        }
+    }
 }

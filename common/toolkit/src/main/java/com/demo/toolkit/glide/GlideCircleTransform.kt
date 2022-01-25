@@ -8,7 +8,7 @@ import java.security.MessageDigest
 
 class GlideCircleTransform : BitmapTransformation() {
 
-    private val ID = "com.baoerzixun.app.toolkit.GlideCircleTransform"
+    private val ID = "GlideCircleTransform"
     private val ID_BYTES: ByteArray = ID.toByteArray(Key.CHARSET)
 
     override fun updateDiskCacheKey(messageDigest: MessageDigest) {

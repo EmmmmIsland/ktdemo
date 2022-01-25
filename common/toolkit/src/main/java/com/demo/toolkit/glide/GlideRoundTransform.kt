@@ -1,4 +1,4 @@
-package com.ebook.toolkit.glide
+package com.demo.toolkit.glide
 
 import android.graphics.*
 import com.bumptech.glide.load.Key
