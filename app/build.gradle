@@ -50,4 +50,8 @@ dependencies {
     implementation project(path: ':baseProject')
     kapt 'com.alibaba:arouter-compiler:1.5.1'
     implementation project(":common:toolkit")
+
+    implementation deps.rxPermission
+    implementation deps.rxJava
+    implementation deps.rxAndroid
 }
