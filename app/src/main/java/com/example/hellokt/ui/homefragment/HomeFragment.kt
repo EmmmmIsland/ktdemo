@@ -3,6 +3,7 @@ package com.example.hellokt.ui.homefragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.lifecycle.ViewModelProvider
 import com.alibaba.android.arouter.launcher.ARouter
 import com.demo.toolkit.ext.onClickSafe
@@ -19,8 +20,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
-        binding.tvBlur.onClickSafe {
-            ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_BLUR_ACTIVITY).navigation()
+        binding.tvConstraintLayout.onClickSafe {
+            ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_CONSTRAINT_LAYOUT_ACTIVITY).navigation()
         }
     }
 }
