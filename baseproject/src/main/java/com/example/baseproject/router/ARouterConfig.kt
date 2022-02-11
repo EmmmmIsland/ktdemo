@@ -5,6 +5,7 @@ package com.example.baseproject.router
          const val AROUTER_PATH_MAIN_ACTIVITY = "/app/mainActivity"
          const val AROUTER_PATH_SETTING_ACTIVITY = "/app/settingActivity"
          const val AROUTER_PATH_CONSTRAINT_LAYOUT_ACTIVITY = "/app/ConstraintLayoutActivity"
+         const val AROUTER_PATH_RX_ACTIVITY = "/app/RxActivity"
      }
 }
 

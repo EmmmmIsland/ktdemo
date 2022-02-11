@@ -1,6 +1,7 @@
 package com.example.hellokt.ui.homefragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintSet
@@ -10,6 +11,8 @@ import com.demo.toolkit.ext.onClickSafe
 import com.example.baseproject.base.BaseFragment
 import com.example.baseproject.router.ARouterConfig
 import com.example.hellokt.databinding.FragmentHomeBinding
+import io.reactivex.Observable
+import io.reactivex.functions.Consumer
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun getLayout(inflater: LayoutInflater, container: ViewGroup?): FragmentHomeBinding = FragmentHomeBinding.inflate(layoutInflater)
@@ -22,6 +25,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         super.initView(savedInstanceState)
         binding.tvConstraintLayout.onClickSafe {
             ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_CONSTRAINT_LAYOUT_ACTIVITY).navigation()
+        }
+        binding.tvRx.onClickSafe {
+            ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_RX_ACTIVITY).navigation()
         }
     }
 }
