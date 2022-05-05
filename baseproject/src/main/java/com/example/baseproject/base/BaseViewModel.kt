@@ -1,58 +1,39 @@
 package com.example.baseproject.base
 
-import android.annotation.SuppressLint
-import android.app.Application
 import androidx.lifecycle.*
+import com.demo.toolkit.LogUtil
+import com.ebook.network.BuildConfig
+import com.hellokt.network.RequestCode
+import com.hellokt.network.http.base.BaseResponse
+import kotlinx.coroutines.launch
 
 
-abstract class BaseViewModel : ViewModel(), ViewModelLifecycle {
-    @SuppressLint("StaticFieldLeak")
-    lateinit var application: Application
-
-    private lateinit var lifcycleOwner: LifecycleOwner
-
-    override fun onAny(owner: LifecycleOwner, event: Lifecycle.Event) {
-        this.lifcycleOwner = owner
-    }
-
-    override fun onCreate() {
-
-    }
-
-    override fun onStart() {
-
-    }
-
-    override fun onResume() {
-
-    }
-
-    override fun onPause() {
-
-    }
-
-    override fun onStop() {
-
-    }
-
-    override fun onDestroy() {
-
-    }
-
-    companion object {
-        @JvmStatic
-        fun <T : BaseViewModel> createViewModelFactory(viewModel: T): ViewModelProvider.Factory {
-            return ViewModelFactory(viewModel)
+open class BaseViewModel : ViewModel() {
+    fun <T : BaseResponse> launch(
+        baseRepository: BaseRepository<T>,
+        complete: (suspend () -> Unit)? = null,
+        error: (suspend (errCode: Int, errorMsg: String) -> Unit)? = null,
+        success: suspend (rsp: T) -> Unit,
+    ) {
+        viewModelScope.launch {
+            try {
+                val rsp: T = baseRepository.request()
+                success.invoke(rsp)
+            } catch (e: NetworkException) {
+                error?.invoke(e.code ?: RequestCode.UNKNOW, e.message ?: "")
+            } catch (e: Throwable) {
+                if (BuildConfig.DEBUG) {
+                    LogUtil.e(e.localizedMessage)
+                }
+//                if(NetworkUtil.isNetworkConected(App.INSTANCE)) {
+//                    error?.invoke(RequestCode.UNKNOW, ResourceUtils.getString(R.string.internet_problem))
+//                } else {
+//                    error?.invoke(RequestCode.UNKNOW, ResourceUtils.getString(R.string.no_network))
+//                }
+                error?.invoke(RequestCode.UNKNOW, "no_network")
+            } finally {
+                complete?.invoke()
+            }
         }
-    }
-}
-
-/**
- * 创建ViewModel的工厂，以此方法创建的ViewModel，可在构造函数中传参
- */
-class ViewModelFactory(val viewModel: BaseViewModel) : ViewModelProvider.Factory {
-
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return viewModel as T
     }
 }

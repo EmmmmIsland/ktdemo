@@ -29,6 +29,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildFeatures {
         viewBinding = true
     }
@@ -50,6 +55,7 @@ dependencies {
     implementation project(path: ':baseProject')
     kapt 'com.alibaba:arouter-compiler:1.5.1'
     implementation project(":common:toolkit")
+    implementation project(":common:network")
 
     implementation deps.rxPermission
     implementation deps.rxJava
