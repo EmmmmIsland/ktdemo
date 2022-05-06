@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/navHomeFragment">
+
+    <fragment
+        android:id="@+id/navHomeFragment"
+        android:name="com.example.hellokt.ui.navmain.NavHomeFragment"
+        android:label="NavHomeFragment" >
+        <action
+            android:id="@+id/action_navHomeFragment_to_navMidFragment"
+            app:destination="@id/navMidFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navMidFragment"
+        android:name="com.example.hellokt.ui.navmain.NavMidFragment"
+        android:label="NavMidFragment" >
+        <action
+            android:id="@+id/action_navMidFragment_to_navMineFragment"
+            app:destination="@id/navMineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navMineFragment"
+        android:name="com.example.hellokt.ui.navmain.NavMineFragment"
+        android:label="NavMineFragment" >
+        <action
+            android:id="@+id/action_navMineFragment_to_navHomeFragment"
+            app:destination="@id/navHomeFragment" />
+    </fragment>
+</navigation>
