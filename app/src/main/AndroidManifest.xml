@@ -29,6 +29,7 @@
         <activity android:name=".ui.setting.SettingActivity"/>
         <activity android:name=".ui.blur.ConstraintLayoutActivity"/>
         <activity android:name=".ui.rx.RxActivity"/>
+        <activity android:name=".ui.navmain.NavMainActivity"/>
     </application>
 
 </manifest>

@@ -29,8 +29,15 @@ class LoginActivity : BaseVmActivity<ActivityLoginBinding>() {
             viewModel.login()
 //            ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_MAIN_ACTIVITY).navigation()
         }
-        viewModel.loginStatus.observe(this,{
-            if (it){
+        binding.btnNavigation.onClickSafe {
+            ARouter.getInstance().build(ARouterConfig.AROUTER_PATH_NAV_MAIN_ACTIVITY).navigation()
+        }
+    }
+
+    override fun initViewModel() {
+        super.initViewModel()
+        viewModel.loginStatus.observe(this, {
+            if (it) {
                 toast("name:" + viewModel.name.value + " age" + viewModel.age.value)
             }
         })

@@ -94,5 +94,19 @@
         app:layout_constraintRight_toRightOf="@id/et_code"
         app:layout_constraintTop_toBottomOf="@id/et_code" />
 
+    <Button
+        android:id="@+id/btn_navigation"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
+        android:background="#33333333"
+        android:text="跳转nav"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/et_code"
+        app:layout_constraintRight_toRightOf="@id/et_code"
+        app:layout_constraintTop_toBottomOf="@id/login_by_phone" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
