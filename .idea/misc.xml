@@ -5,13 +5,20 @@
       <map>
         <entry key="app/src/main/res/drawable/common_icon_navigation_back_selector.xml" value="0.3" />
         <entry key="app/src/main/res/drawable/common_icon_navigation_back_white_selector.xml" value="0.3" />
+        <entry key="app/src/main/res/drawable/home_page_selector.xml" value="0.1645" />
+        <entry key="app/src/main/res/drawable/ic_tab_task.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/main_bg.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/drawable/mid_nav_page_selector.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/mine_nav_page_selector.xml" value="0.1385" />
+        <entry key="app/src/main/res/drawable/mine_page_selector.xml" value="0.1645" />
+        <entry key="app/src/main/res/drawable/nav_home_page_selector.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/purple_btn.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/drawable/tabbar_textcolor.xml" value="0.218" />
         <entry key="app/src/main/res/layout/activity_blur.xml" value="0.146875" />
         <entry key="app/src/main/res/layout/activity_constraint.xml" value="0.2838541666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.271875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.271875" />
-        <entry key="app/src/main/res/layout/activity_navmain.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_navmain.xml" value="0.10179640718562874" />
         <entry key="app/src/main/res/layout/activity_rx.xml" value="0.2838541666666667" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.271875" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.11458333333333333" />
@@ -23,6 +30,7 @@
         <entry key="app/src/main/res/layout/fragment_nav_mine.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_nnavhome.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/placeholder_template.xml" value="0.13125" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.2125" />
         <entry key="baseProject/src/main/res/drawable/ic_arrow.xml" value="0.1515625" />
         <entry key="baseProject/src/main/res/drawable/ic_arrow_black.xml" value="0.1515625" />
         <entry key="baseproject/src/main/res/drawable/tool_bar_bg.xml" value="0.3" />

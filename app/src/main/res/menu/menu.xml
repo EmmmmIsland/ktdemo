@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/navHomeFragment"
+        android:title="HOME"
+        android:icon="@drawable/nav_home_page_selector" />
+
+    <item android:id="@+id/navMidFragment"
+        android:title="MID"
+        android:icon="@drawable/nav_mid_page_selector" />
+
+    <item android:id="@+id/navMineFragment"
+        android:title="MINE"
+        android:icon="@drawable/nav_mine_page_selector" />
+
+</menu>
