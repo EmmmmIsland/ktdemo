@@ -1,5 +1,10 @@
 package com.example.hellokt.model
 
-data class User (var mUserName : String ,var mUserage :Int)
+import com.google.gson.annotations.SerializedName
+
+data class User (
+    @SerializedName("id") @JvmField var id : Int?,
+    @SerializedName("name") @JvmField var name : String?,
+                 @SerializedName("age") @JvmField var age : String?)
 
 

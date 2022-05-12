@@ -4,6 +4,7 @@ import com.hellokt.network.http.RequestMode
 import com.hellokt.network.http.base.BaseRequest
 import com.hellokt.network.http.base.BaseResponse
 import com.example.baseproject.base.BaseRepository
+import com.example.hellokt.model.User
 import com.google.gson.annotations.SerializedName
 
 class LoginRepository : BaseRepository<LoginRepository.Rsp>() {
@@ -22,11 +23,6 @@ class LoginRepository : BaseRepository<LoginRepository.Rsp>() {
     }
 
     class Rsp : BaseResponse() {
-        override val data: LoginModel? = null
+        override val data: User? = null
     }
-
-    class LoginModel(
-        @SerializedName("name") @JvmField var name : String?,
-        @SerializedName("age") @JvmField var age : String?,
-    )
 }
